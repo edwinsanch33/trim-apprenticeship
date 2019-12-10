@@ -3,7 +3,7 @@ This project uses Create-React-App Template
 ## Apprenticepship Submission Form
 
 This project is made as a form to be submitted to Tim Hasse at Trim Agency
-Final Product will follow this [UI layout](https://www.dropbox.com/s/fcmmghnfrszfk6l/codingchallenge.psd?dl=0) using font 'MUSEO SANS (weight 500)'
+Final Product will follow this [UI layout](https://www.dropbox.com/s/fcmmghnfrszfk6l/codingchallenge.psd?dl=0) using font `MUSEO SANS (weight 500)`
 
 ## Product Owners
 

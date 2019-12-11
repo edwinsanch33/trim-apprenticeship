@@ -8,6 +8,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #114B5F;
   text-align: center;
+  color: #B6D1C8;
+}
+.form-box {
+  height: auto;
+  width: 50vw;
+  align-content: center;
+}
+::placeholder {
+  color:#4299A0;
+}
+.ratings {
+  width: 2vw;
 }
 
 code {

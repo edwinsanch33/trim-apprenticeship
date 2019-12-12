@@ -5,10 +5,10 @@ class Form extends React.Component {
   state = { name: this.props || "", email: "", repo: "", url: "", rating: 0, ratingToggle: false, ratingArray: []}
   componentDidMount() {
     this.setState({
-      name: localStorage.get('name') || [],
-      email: localStorage.get('email') || [],
-      repo: localStorage.get('repo') || [],
-      url: localStorage.get('url') || [],
+      name: localStorage.get('name') || "",
+      email: localStorage.get('email') || "",
+      repo: localStorage.get('repo') || "",
+      url: localStorage.get('url') || "",
       rating: localStorage.get('rating') || [],
       ratingArray: localStorage.get('ratingArray') || []
     }) 
@@ -38,7 +38,19 @@ class Form extends React.Component {
 }
 
 handleSubmit = () => {
-
+  let name = this.state.name
+  let email = this.state.email 
+  let repo = this.state.repo
+  let url = this.state.url
+  let rating = this.state.rating
+  let body = `name:${name}&email:${email}&repo:${repo}&url:${url}&rating:${rating}`
+  // let para = document.getElementsByTagName("P")
+  // for (let i=0;i<para.length;i++){
+  //   if(document.getElementById(`${i}`).value > 0){
+  //     body =+ `${para[i]}`
+  //   }
+  // }
+  console.log(body)
 }
   render(){
     const { name, email, repo, url, rating, ratingArray } = this.state
@@ -54,7 +66,7 @@ handleSubmit = () => {
               <input type="url" name="url" id="url" placeholder="URL" value={url} onChange={this.handleChange}></input>
               { rating > 50 ? <p>Reached Rating Limit (Reduce Rating)</p> : null }
               <p>USING BEST PRACTICES FOR OOP: <input type="number" id="0" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[0] || this.value} onChange={this.handleRating}></input></p>
-              <p>MODULAR DEVELOPMENT: <input type="number" id="1" className="ratings" placeholder="0" min="0" max="50" value={ ratingArray[1] || this.value} onChange={this.handleRating}></input></p>
+              <p>MODULAR DEVELOPMENT: <input type="number" id="1" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[1] || this.value} onChange={this.handleRating}></input></p>
               <p>FULL-STACK WORKFLOW UNDERSTANDING: <input type="number" id="2" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[2] || this.value} onChange={this.handleRating}></input></p>
               <p>TESTING: <input type="number" id="3" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[3] || this.value} onChange={this.handleRating}></input></p>
               <p>DATABASE KNOWLEDGE: <input type="number" id="4" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[4] || this.value} onChange={this.handleRating}></input></p>

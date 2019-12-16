@@ -13,3 +13,7 @@ Tim Hasse
 ## User Overview
 
 Users will fill out form with information of project of this nature and rate their development skills. Upon completion when form is submitted email will be sent to Tim Hasse at Trim Agency. 
+
+## Heroku 
+
+App was deployed on Heroku. App can be viewed [here](https://trimapprencticeform.herokuapp.com/)

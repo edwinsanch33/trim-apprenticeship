@@ -56,30 +56,59 @@ handleSubmit = () => {
     const { name, email, repo, url, rating, ratingArray } = this.state
     return(
       <Fragment>
-        <h1>Hello World!</h1>
         <div className="form-box">
           <form>
-            <div>
+            <div className="form-content">
               <input type="text" name="name" id="name" placeholder="FULL NAME" value={name} onChange={this.handleChange}></input>
               <input type="email" name="email" id="email" placeholder="EMAIL" value={email} onChange={this.handleChange}></input>
               <input type="text" name="repo" id="repo" placeholder="PROJECT REPO" value={repo} onChange={this.handleChange}></input>
               <input type="url" name="url" id="url" placeholder="URL" value={url} onChange={this.handleChange}></input>
               { rating > 50 ? <p>Reached Rating Limit (Reduce Rating)</p> : null }
-              <p>USING BEST PRACTICES FOR OOP: <input type="number" id="0" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[0] || this.value} onChange={this.handleRating}></input></p>
-              <p>MODULAR DEVELOPMENT: <input type="number" id="1" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[1] || this.value} onChange={this.handleRating}></input></p>
-              <p>FULL-STACK WORKFLOW UNDERSTANDING: <input type="number" id="2" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[2] || this.value} onChange={this.handleRating}></input></p>
-              <p>TESTING: <input type="number" id="3" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[3] || this.value} onChange={this.handleRating}></input></p>
-              <p>DATABASE KNOWLEDGE: <input type="number" id="4" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[4] || this.value} onChange={this.handleRating}></input></p>
-              <p>DEBUGGING: <input type="number" id="5" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[5] || this.value} onChange={this.handleRating}></input></p>
-              <p>PROBLEM SOLVING SKILLS: <input type="number" id="6" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[6] || this.value} onChange={this.handleRating}></input></p>
-              <p>"JAVASCRIPT": <input type="number" id="7" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[7] || this.value} onChange={this.handleRating}></input></p>
-              <p>HTML: <input type="number" id="8" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[8] || this.value} onChange={this.handleRating}></input></p>
-              <p>CSS: <input type="number" id="9" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[9] || this.value} onChange={this.handleRating}></input></p>
-              <p>WORKING ON A TEAM: <input type="number" id="10" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[10] || this.value} onChange={this.handleRating}></input></p>
-              <p>SELF MOTIVATION: <input type="number" id="11" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[11] || this.value} onChange={this.handleRating}></input></p>
-              <p>COMMUNICATION SKILLS: <input type="number" id="12" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[12] || this.value} onChange={this.handleRating}></input></p>
-              <p>YOUR OWN ENERGY LEVEL: <input type="number" id="13" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[13] || this.value} onChange={this.handleRating}></input></p>
-              <p>INTELLIGENCE/APITUDE: <input type="number" id="14" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[14] || this.value} onChange={this.handleRating}></input></p>
+              <div className="rating-display">
+                <p>USING BEST PRACTICES FOR OOP:</p><input type="number" id="0" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[0] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>MODULAR DEVELOPMENT:</p><input type="number" id="1" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[1] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>FULL-STACK WORKFLOW UNDERSTANDING:</p><input type="number" id="2" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[2] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>TESTING:</p><input type="number" id="3" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[3] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>DATABASE KNOWLEDGE:</p><input type="number" id="4" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[4] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>DEBUGGING:</p><input type="number" id="5" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[5] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>PROBLEM SOLVING SKILLS:</p><input type="number" id="6" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[6] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>"JAVASCRIPT":</p><input type="number" id="7" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[7] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>HTML:</p><input type="number" id="8" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[8] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>CSS:</p><input type="number" id="9" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[9] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>WORKING ON A TEAM:</p><input type="number" id="10" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[10] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>SELF MOTIVATION:</p><input type="number" id="11" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[11] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>COMMUNICATION SKILLS:</p><input type="number" id="12" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[12] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>YOUR OWN ENERGY LEVEL:</p><input type="number" id="13" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[13] || this.value} onChange={this.handleRating}></input>
+              </div>
+              <div className="rating-display">
+                <p>INTELLIGENCE/APITUDE:</p><input type="number" id="14" className="ratings" placeholder="0" min="0" max="50" value={ratingArray[14] || this.value} onChange={this.handleRating}></input>
+              </div>
               {this.state.ratingToggle ? this.getTotal() : null }
               <button type="submit" id="submit" onClick={this.handleSubmit}>SUBMIT</button>
             </div>
